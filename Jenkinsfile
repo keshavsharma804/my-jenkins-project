@@ -36,7 +36,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building application...'
-                sh './build.sh'
+                sh '''
+                    echo "Making build.sh executable..."
+                    chmod +x build.sh
+                    
+                    echo "Executing build script..."
+                    ./build.sh
+                '''
                 echo '✓ Build completed'
             }
         }
