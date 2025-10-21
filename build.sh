@@ -1,4 +1,5 @@
 #!/bin/bash
+exit 1
 echo "=========================================="
 echo "Building My Jenkins Project"
 echo "=========================================="
